@@ -7,6 +7,15 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+::selection {
+	background: #06bd00;
+	color: black;
+}
+::-moz-selection {
+	background: #06bd00;
+	color: black;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -99,11 +108,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-color: #000000;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -120,12 +125,12 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background-color: #935d8c;
+		background-color: #000000;
 		color: rgba(255, 255, 255, 0.65);
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: 'Courier New', Courier, monospace;
 		font-size: 17pt;
 		font-weight: 300;
 		line-height: 1.65;
@@ -170,7 +175,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		font-weight: 400;
+		font-weight: 550;
 	}
 
 	em, i {
@@ -211,7 +216,7 @@ input, select, textarea {
 	}
 
 	h2 {
-		font-size: 1.5em;
+		font-size: 2.25em;
 	}
 
 	h3 {
@@ -1934,6 +1939,7 @@ input, select, textarea {
 		button:hover,
 		.button:hover {
 			background-color: rgba(255, 255, 255, 0.075);
+			color:rgba(247, 247, 247, 0.95)
 		}
 
 		input[type="submit"]:active,
@@ -2148,8 +2154,8 @@ input, select, textarea {
 	input[type="email"],
 	select,
 	textarea {
-		background-color: rgba(255, 255, 255, 0.075);
-		border-color: rgba(255, 255, 255, 0.35);
+		outline: none;
+		border: none;
 	}
 
 		input[type="text"]:focus,
@@ -2157,8 +2163,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #8cc9f0;
-			box-shadow: 0 0 0 1px #8cc9f0;
+			border: none;
 		}
 
 	select {
@@ -2808,7 +2813,8 @@ input, select, textarea {
 		-ms-justify-content: center;
 		justify-content: center;
 		width: calc(100% + 2em);
-		margin: 0 0 3em -2em;
+		margin: 3em -2em;
+		margin-bottom: -2em;
 		padding: 0;
 		list-style: none;
 	}
@@ -3334,25 +3340,34 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
-		color: #636363;
+		background-color: #111111;
+		color: #06bd00;
 		border-radius: 0.25em;
 	}
-
 		#main input, #main select, #main textarea {
-			color: #636363;
+			outline: none;
+			border: none;
+			border-radius: 10px;
+			height: 40px;
+			background-color: #2c2c2c;
+			color: #06bd00;
+			padding: 5px;
+			text-align: center;
+			margin-bottom: 30px;
+			width: 100%;
+			caret-color: #06bd00;
 		}
 
 		#main a:hover {
-			color: #636363;
+			color: #06bd00;
 		}
 
 		#main strong, #main b {
-			color: #636363;
+			color: #06bd00;
 		}
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
-			color: #636363;
+			color: #06bd00;
 		}
 
 		#main blockquote {
@@ -3378,8 +3393,8 @@ input, select, textarea {
 		#main button,
 		#main .button {
 			background-color: transparent;
-			box-shadow: inset 0 0 0 1px #dddddd;
-			color: #636363 !important;
+			box-shadow: inset 0 0 0 1px #06bd00;
+			color: #06bd00 !important;
 		}
 
 			#main input[type="submit"]:hover,
@@ -3387,7 +3402,7 @@ input, select, textarea {
 			#main input[type="button"]:hover,
 			#main button:hover,
 			#main .button:hover {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: #06bd0028;
 			}
 
 			#main input[type="submit"]:active,
@@ -3449,8 +3464,8 @@ input, select, textarea {
 		#main input[type="email"],
 		#main select,
 		#main textarea {
-			background-color: rgba(222, 222, 222, 0.25);
-			border-color: #dddddd;
+			outline: none;
+			border: none;
 		}
 
 			#main input[type="text"]:focus,
@@ -3458,8 +3473,8 @@ input, select, textarea {
 			#main input[type="email"]:focus,
 			#main select:focus,
 			#main textarea:focus {
-				border-color: #8cc9f0;
-				box-shadow: 0 0 0 1px #8cc9f0;
+				outline: none;
+				border: none;
 			}
 
 		#main select {
@@ -3545,11 +3560,7 @@ input, select, textarea {
 		}
 
 		#main header.major h2:after {
-			background-color: #dddddd;
-			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+			background-color: #06bd00;
 		}
 
 		#main table tbody tr {
